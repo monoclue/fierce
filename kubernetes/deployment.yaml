@@ -1,0 +1,18 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: fierce
+  namespace: fierce
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fierce
+  template:
+    metadata:
+      labels:
+        app: fierce
+    spec:
+      containers:
+        - name: fierce
+          image: ghcr.io/monoclue/fierce:main
