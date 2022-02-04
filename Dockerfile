@@ -5,7 +5,7 @@ WORKDIR /fierce
 FROM python:alpine
 RUN pip3 uninstall dnspython
 RUN pip3 install --upgrade dnspython
-COPY --from=build /fierce .
+COPY --from=build /fierce /fierce
 WORKDIR /fierce
 ENTRYPOINT ["./fierce.py"]
 CMD ["--domain google.com"]
