@@ -7,5 +7,5 @@ RUN pip3 uninstall dnspython
 RUN pip3 install --upgrade dnspython
 COPY --from=build /fierce/fierce .
 #ENTRYPOINT ["./fierce.py"]
-ENTRYPOINT ["python3 -m http.server"]
+ENTRYPOINT ["python -m http.server"]
 #CMD ["--domain google.com"]
