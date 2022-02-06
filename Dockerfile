@@ -8,5 +8,5 @@ RUN pip3 install --upgrade dnspython
 #COPY --from=build /usr/fierce /usr/fierce
 #WORKDIR /usr/fierce
 RUN python3 -m pip install fierce
-ENTRYPOINT [ "fierce", "--domain google.com" ]
+ENTRYPOINT [ "fierce --domain google.com" ]
 #CMD [ "--domain google.com" ]
